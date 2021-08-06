@@ -21,8 +21,8 @@ class Polygon:
         if isinstance(other, Polygon):
             return self.n == other.n and self.R == other.R
 
+    def __gt__(self, other):
+        if isinstance(other, Polygon):
+            return self.n > other.n
 
-p1 = Polygon(4, 4)
-p2 = Polygon(4, 5)
 
-print(p1 == p2)
