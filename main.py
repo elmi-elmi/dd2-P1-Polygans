@@ -14,8 +14,8 @@ class Polygon:
         self.perimeter = n * self.s
 
     def __repr__(self):
-        return f'Polygon(edges={self.n}, interior_angle={self.angle},' \
-               f'apothem={self.a}, area={self.area}, perimeter={self.perimeter})'
+        return f'Polygon(edges={self.n}, interior_angle={self.angle:0.3f},' \
+               f'apothem={self.a:0.3f}, area={self.area:0.3f}, perimeter={self.perimeter:0.3f})'
 
     def __eq__(self, other):
         if isinstance(other, Polygon):
@@ -24,5 +24,6 @@ class Polygon:
     def __gt__(self, other):
         if isinstance(other, Polygon):
             return self.n > other.n
+
 
 
