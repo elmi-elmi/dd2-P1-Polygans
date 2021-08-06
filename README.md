@@ -1,11 +1,10 @@
 # dd2-P1-Polygans
 ***
-***
 ## Project 1 (Deep Dive Python 3)
 ___
 <h1 style="color: darkkhaki">Goal 1</h1>
 
-<h3 >Create a **<span style="color: teal">Polygon</span>** class:</h3>
+<h3 >Create a ** <span style="color: teal">Polygon</span> ** class:</h3>
 
 
 ### Initializer
@@ -28,4 +27,4 @@ ___
   
 <h1 style="color: darkkhaki">Goal 2</h1>
 
-<h3 >Implement a **<span style="color: teal">Polygon</span>** sequence type:</h3>
+<h3 >Implement a ** <span style="color: teal">Polygon</span> ** sequence type:</h3>
