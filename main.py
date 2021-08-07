@@ -5,6 +5,8 @@ from math import sin, cos, pi
 
 class Polygon:
     def __init__(self, n, R):
+        if n < 3:
+            raise ValueError('Polygon must have at least three sides.')
         self._n = n
         self._R = R
 
@@ -63,6 +65,13 @@ class Polygon:
 def test_polygon():
     rel_tol = 0.001
     abs_tol = 0.001
+    try:
+        p = Polygon(2, 10)
+        assert False, ('Creating a Polygon with 2 sides: '
+                       'Excemption excepted, not received')
+    except ValueError:
+        pass
+
     n = 3
     R = 1
     p = Polygon(n, R)
@@ -125,5 +134,6 @@ def test_polygon():
     assert p1 != p4
     assert p4 == p5
 test_polygon()
+
 
 
