@@ -3,6 +3,7 @@ import math
 from math import sin, cos, pi
 
 
+
 class Polygon:
     def __init__(self, n, R):
         if n < 3:
@@ -136,4 +137,34 @@ def test_polygon():
 test_polygon()
 
 
+class Polygons:
+    def __init__(self, m, R):
+        if m < 3:
+            raise ValueError('m must be greater then 3')
+        self._m = m
+        self._R = R
+        self._polygons = [Polygon(i, R) for i in range(3, m+1)]
 
+    def __len__(self):
+        return len(self._m) - 2
+
+    def __repr__(self):
+        return f'Polygons(m={self._m}, R={self._R})'
+
+    def __getitem__(self, item):
+        return self._polygons[item]
+
+    @property
+    def ax_efficiency_polygon(self):
+        sorted_polygons = sorted(self._polygons,
+                                 key=lambda p: p.area/p.perimeter,
+                                 reverse=True)
+
+        return sorted_polygons[0]
+
+
+p = Polygons(10, 1)
+print(p.ax_efficiency_polygon)
+
+
+print(*[(i, i.area/i.perimeter) for i in p], sep='\n')
