@@ -15,7 +15,7 @@ Create a **Polygon** class:
 + interior angle
 + edge length
 + apothem
-+ are
++ area
 + perimeter
 
 ### Functionality
