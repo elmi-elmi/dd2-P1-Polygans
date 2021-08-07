@@ -21,7 +21,7 @@ Create a **Polygon** class:
 ### Functionality
 + a proper representation(`__repr__`)
 + implements equality(`==`) based on \# vertices and circumsradius(`__eq__`)
-+implements `>` based on number of vertices only(`__gt__`)
++ implements `>` based on number of vertices only(`__gt__`)
 
 ## Goal 2
 
